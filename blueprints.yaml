@@ -1,0 +1,15 @@
+author:
+    name: Marcus Rommedahl
+
+name: Nanomalistic
+version: 0.1.0
+description: "Minimalistic theme inspired by better motherf**king website"
+icon: empire
+author:
+    name: Marcus Rommedahl
+    email: dev@rommedahl.net
+    url: https://rommedahl.net
+homepage: https://github.com/rommedahl/grav-theme-nanomalisitc
+demo: https://demo.getgrav.org/blog-skeleton
+keywords: nanomalistic, theme, core, minimalistic, fast
+bugs: https://github.com/rommedahl/grav-theme-nanomalistic/issues

@@ -1,0 +1,56 @@
+body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+
+body {
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #444;
+  padding: 0 10px; }
+
+h1, h2, h3 {
+  line-height: 1.2; }
+
+code, pre {
+  background: #f4f4f4; }
+
+pre {
+  border: 1px solid #ccc;
+  page-break-inside: avoid;
+  max-width: 95%;
+  padding: .5em 1em;
+  overflow: auto; }
+
+input, textarea, button {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-bottom: .5em;
+  padding: 10px;
+  display: block;
+  font-size: 18px;
+  box-sizing: border-box;
+  border-radius: 2px; }
+
+textarea {
+  overflow: auto;
+  outline: none;
+  height: 7em;
+  box-shadow: none;
+  resize: none;
+  /*remove the resize handle on the bottom right*/ }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background: #444; }
+  a:link {
+    color: #5bf; }
+  a:visited {
+    color: #ccf; } }

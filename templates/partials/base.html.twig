@@ -1,0 +1,56 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html>
+
+<head>
+{% block head %}
+    <meta charset="utf-8">
+    <title>{% if header.title %}{{ header.title|e('html') }} {% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/feeds.html.twig' %}
+    
+{% endblock head %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css-compiled/nanomalistic.css', 100) %}
+{% endblock %}
+
+{% block javascripts %}
+    {% do assets.addJs('jquery', 100) %}
+{% endblock %}
+
+{% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+{% endblock %}
+
+</head>
+
+<body>
+
+    <header>
+	{% block navigation %}
+		{% include 'partials/navigation.html.twig' %}
+	{% endblock %}
+        {% if header.title %}<h1>{{ header.title|e('html') }}</h1>{% endif %}
+    </header>
+
+{% block body %}
+    <section id="body">
+        <div>
+        {% block content %}{% endblock %}
+        </div>
+    </section>
+{% endblock %}
+
+{% block comments %}
+{% include 'partials/comments.html.twig' with {'page': page} %}
+{% endblock %}
+
+{% block bottom %}
+    {{ assets.js('bottom')|raw }}
+{% endblock %}
+
+</body>
+
+</html>

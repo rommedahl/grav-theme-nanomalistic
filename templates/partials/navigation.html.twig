@@ -1,0 +1,6 @@
+{% set menu_options = { items: {'@root.children':''} , 'order': {'by': 'title'}} %}
+{% set menu = page.collection(menu_options) %}
+{% for child in menu %}
+    <a href = "{{ child.url }}">{{ child.title}}</a>
+    {{ not loop.last ? '|'  }}
+{% endfor %}

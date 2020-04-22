@@ -1,0 +1,101 @@
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$primary-color: #444;
+$border-color: #ccc;
+
+%hyphenate {
+	//https://justmarkup.com/articles/2015-07-31-dealing-with-long-words-in-css/
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    font-family: $font-stack;
+    color: $primary-color;
+    padding: 0 10px;
+    @extend %hyphenate;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+code {
+  background: #f4f4f4;
+//  font-family: "Courier New", Courier, monospace;
+}
+
+pre {
+  @extend code;
+//    background: #f4f4f4;
+    border: 1px solid $border-color;
+//    border-left: 3px solid #f36d33;
+//    color: #666;
+    page-break-inside: avoid;
+//    font: normal normal 14px/16px "Courier New", Courier, Monospace;
+//    font-family: monospace;
+//    font-size: 15px;    
+//    line-height: 1.0; //1.6
+//    margin-bottom: 1.6em;
+    max-width: 95%;
+    padding: .5em 1em; //1em 1.5em;
+//    display: block;
+//    word-wrap: break-word;
+//    margin-left: 30px;
+    overflow: auto;
+//    overflow-x: auto;
+//    white-space: pre-wrap;
+//    counter-reset: line;
+}
+
+input, textarea, button {
+  width: 100%;
+  border: 1px solid $border-color;
+  margin-bottom: .5em;
+	padding: 10px;
+	display: block;
+  font-size: 18px;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+textarea {
+//    border: none;
+    overflow: auto;
+    outline: none;
+    height: 7em;
+//    -webkit-box-shadow: none;
+//    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; /*remove the resize handle on the bottom right*/
+//      border-radius: 4px;
+ //   background-color: transparent;
+}
+
+//.pure-form .pure-group input, .pure-form .pure-group textarea {
+//	margin: 0 0 -1px;
+//	border-radius: 0;
+//	position: relative;
+//	top: -1px;
+//}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background: #444
+    }
+    a:link {
+        color: #5bf
+    }
+    a:visited {
+        color: #ccf
+    }
+}
