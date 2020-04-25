@@ -43,10 +43,6 @@
     </section>
 {% endblock %}
 
-{% block comments %}
-{% include 'partials/comments.html.twig' with {'page': page} %}
-{% endblock %}
-
 {% block bottom %}
     {{ assets.js('bottom')|raw }}
 {% endblock %}
